@@ -1,18 +1,15 @@
 /*-------------------------------*/
 /* FONTS */
 /*-------------------------------*/
-// $font-url--google: 'https://fonts.googleapis.com/css?family=Lato:300i,400|Raleway:300i,400,600,700&display=swap';
+$font-url--google: "https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Source+Sans+Pro:ital,wght@0,400;1,300&display=swap";
 
-// $font-family--primary: 'Lato', sans-serif, Helvetica, Arial;
-// $font-family--secondary: 'Raleway', sans-serif, Helvetica, Arial;
+$font-family--primary: "Source Sans Pro", sans-serif;
+$font-family--secondary: "Playfair Display", serif;
 
 // $font-weight--light: 300;
 // $font-weight--regular: 400;
 // $font-weight--semi-bold: 600;
 // $font-weight--bold: 700;
-
-$line-height--base: 24px;
-$word-spacing--base: 3px;
 
 /*-------------------------------*/
 /* BREAKPOINTS */
@@ -28,6 +25,9 @@ $word-spacing--base: 3px;
 
 $color--white: #fff;
 $color--black: rgb(44, 44, 44);
+$color--beige: #eedbc6;
+$color--off-white: #f3f3f3;
+$color--steel-blue: #414c51;
 
 /*-------------------------------*/
 /* IMAGE PATH */
