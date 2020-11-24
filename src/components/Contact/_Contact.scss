@@ -1,0 +1,71 @@
+.contact {
+  background-color: $color--steel-blue;
+  padding: space(20) 0 space(10) 0;
+  margin-top: space(-10);
+
+  &-wrapper {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+    gap: space(2);
+    color: $color--beige;
+    border-radius: $border-radius--small;
+  }
+
+  &-header {
+    font-family: $font-family--secondary;
+    font-size: space(4);
+  }
+
+  &-icon-container {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: space(1);
+  }
+
+  &-email {
+    font-style: italic;
+    padding-bottom: space(2);
+  }
+
+  &-icons {
+    font-size: space(4) !important;
+    fill: $color--beige;
+    margin-top: space(1);
+  }
+
+  &-name-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 0 space(2);
+  }
+
+  &-label {
+    display: block;
+    margin-bottom: space(1);
+  }
+
+  &-input {
+    width: 100%;
+    border-radius: $border-radius--small;
+    margin-bottom: space(2);
+    padding: space(1);
+    background-color: $color--light-gray;
+  }
+
+  &-textarea {
+    height: space(22);
+  }
+
+  &-button {
+    display: flex;
+    align-items: center;
+    background-color: $color--steel-blue;
+    border: 1px solid $color--beige;
+    padding: space(1) space(2);
+    border-radius: $border-radius--small;
+  }
+
+  &-button-text {
+    padding-left: space(1);
+  }
+}

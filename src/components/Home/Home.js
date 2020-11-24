@@ -2,6 +2,7 @@ import React, { Component } from "react";
 import BlogCardContainer from "../BlogCardContainer/BlogCardContainer";
 import Header from "../Header/Header";
 import Hero from "../Hero/Hero";
+import Contact from "../Contact/Contact";
 
 export default class Home extends Component {
   render() {
@@ -10,6 +11,7 @@ export default class Home extends Component {
         <Header />
         <Hero />
         <BlogCardContainer />
+        <Contact />
       </div>
     );
   }
