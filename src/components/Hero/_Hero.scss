@@ -1,0 +1,13 @@
+.Hero {
+  color: $color--beige;
+
+  &-heading {
+    font-size: space(9);
+    margin-top: space(9);
+    margin-bottom: space(4);
+  }
+
+  &-text {
+    max-width: 50%;
+  }
+}
