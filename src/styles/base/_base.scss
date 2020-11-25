@@ -2,7 +2,11 @@
 /*GLOBALS*/
 /*-------------------------------*/
 :root {
-  font-size: 16px;
+  font-size: 18px;
+
+  @media screen and (max-width: 800px) {
+    font-size: 16px;
+  }
 }
 
 *,
@@ -61,6 +65,8 @@ button {
 .wrapper {
   max-width: 900px;
   margin: 0 auto;
+  padding-left: space(2);
+  padding-right: space(2);
 }
 
 p {

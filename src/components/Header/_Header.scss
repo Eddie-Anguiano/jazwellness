@@ -1,6 +1,7 @@
 .Header {
   display: flex;
   justify-content: space-between;
-  padding: space(4) 0;
+  padding-top: space(4);
+  padding-bottom: space(4);
   color: $color--beige;
 }

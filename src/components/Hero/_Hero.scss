@@ -2,13 +2,17 @@
   color: $color--beige;
 
   &-heading {
-    font-size: space(9);
+    @include fluid-type(300px, 900px, 36px, 63px);
     margin-top: space(9);
-    margin-bottom: space(4);
+    margin-bottom: space(2);
   }
 
   &-text {
     max-width: 50%;
     margin-bottom: space(20);
+
+    @media screen and (max-width: 800px) {
+      max-width: 75%;
+    }
   }
 }
