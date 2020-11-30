@@ -1,18 +1,21 @@
 .Hero {
   color: $color--beige;
+  text-align: center;
 
   &-heading {
     @include fluid-type(300px, 900px, 36px, 63px);
-    margin-top: space(9);
-    margin-bottom: space(2);
+    margin-top: space(10);
+    margin-bottom: space(4);
+    line-height: 1;
   }
 
   &-text {
-    max-width: 50%;
-    margin-bottom: space(20);
+    text-align: center;
+    max-width: 75%;
+    margin: 0 auto space(28) auto;
 
-    @media screen and (max-width: 800px) {
-      max-width: 75%;
+    @media screen and (max-width: 500px) {
+      max-width: 100%;
     }
   }
 }

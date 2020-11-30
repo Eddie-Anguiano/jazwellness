@@ -3,7 +3,9 @@ import React from "react";
 export default function Hero() {
   return (
     <div className="Hero wrapper">
-      <h1 className="Hero-heading">My own personal blog</h1>
+      <h1 className="Hero-heading">
+        My own <br /> personal blog
+      </h1>
       <p className="Hero-text">
         You will want to look at your image on both desktop and mobile. These
         image sizes typically look best on desktop. So, take a look at them on

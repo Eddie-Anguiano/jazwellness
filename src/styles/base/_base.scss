@@ -20,7 +20,6 @@
 
 body {
   box-sizing: border-box;
-  background-color: $color--light-gray;
 }
 
 textarea,
@@ -65,10 +64,21 @@ button {
 .wrapper {
   max-width: 900px;
   margin: 0 auto;
-  padding-left: space(2);
-  padding-right: space(2);
+  padding-left: space(4);
+  padding-right: space(4);
+
+  @media screen and (max-width: 500px) {
+    padding-left: space(2);
+    padding-right: space(2);
+  }
 }
 
 p {
   line-height: 1.5;
+}
+
+.App {
+  height: 100vh;
+  width: 100vw;
+  background: darkgray url("../../images/hero-img.jpg") center/cover no-repeat;
 }
