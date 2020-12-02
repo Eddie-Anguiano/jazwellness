@@ -3,7 +3,6 @@ import { Link } from "react-router-dom";
 import { FiCornerDownRight } from "react-icons/fi";
 
 export default function BlogCard(props) {
-  console.log(props.blog.id);
   return (
     <Link
       to={`/blog/${props.blog.id}`}
