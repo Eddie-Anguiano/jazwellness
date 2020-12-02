@@ -1,22 +1,22 @@
 import React from "react";
-import placeholder from "../../images/placholder.jpg";
+import { Link } from "react-router-dom";
 import { FiCornerDownRight } from "react-icons/fi";
 
-export default function BlogCard() {
+export default function BlogCard(props) {
+  console.log(props.blog.id);
   return (
-    <div className="BlogCard">
+    <Link
+      to={`/blog/${props.blog.id}`}
+      className="BlogCard"
+      style={{ textDecoration: "none", color: "rgb(44, 44, 44)" }}>
       <div className="BlogCard-imgContainer">
-        <img src={placeholder} alt="blog" className="BlogCard-img" />
+        <img src={props.blog.img} alt="blog" className="BlogCard-img" />
       </div>
 
       <article className="BlogCard-text">
-        <h3 className="BlogCard-header">My tips for a healthier 2020</h3>
-        <p className="BlogCard-date">10/3/2020</p>
-        <p className="BlogCard-content">
-          You will want to look at your image on both desktop and mobile. These
-          image sizes typically look best on desktop. So, take a look at them on
-          smaller screens to make sure it still looks good.
-        </p>
+        <h3 className="BlogCard-header">{props.blog.title}</h3>
+        <p className="BlogCard-date">{props.blog.date}</p>
+        <p className="BlogCard-content">{props.blog.reducedString}</p>
         <div className="BlogCard-bottom">
           <div className="BlogCard-readMore">
             <FiCornerDownRight />
@@ -24,6 +24,6 @@ export default function BlogCard() {
           </div>
         </div>
       </article>
-    </div>
+    </Link>
   );
 }
