@@ -46,9 +46,10 @@ export default class Blog extends Component {
         <Header />
         <div className="Blog wrapper">
           <section className="Blog-post">
+            <div className="Blog-date">{this.state.blog.date}</div>
             <h1 className="Blog-title">{this.state.blog.title}</h1>
             <div className="Blog-author">by Jasmin Chavez</div>
-            <div className="Blog-date">{this.state.blog.date}</div>
+
             <img src={this.state.blog.photo} alt="" className="Blog-img" />
             <div className="Blog-richText">{this.state.blog.jsx}</div>
           </section>
