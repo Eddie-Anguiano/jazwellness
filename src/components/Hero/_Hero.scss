@@ -1,12 +1,12 @@
 .Hero {
-  color: $color--beige;
   text-align: center;
+  color: $color--beige;
 
   &-heading {
-    @include fluid-type(300px, 900px, 36px, 63px);
     margin-top: space(10);
     margin-bottom: space(20);
     line-height: 1;
+    @include fluid-type(300px, 900px, 36px, 63px);
   }
 
   &-text {

@@ -6,7 +6,6 @@
   max-height: 900px;
   padding: space(2);
   border-radius: $border-radius--small;
-  color: $color--steel-blue;
   background-color: $color--white;
   box-shadow: 0px 5px 10px -3px rgba(84, 83, 95, 0.3);
 
@@ -23,23 +22,27 @@
 
   &-header {
     font-size: space(3);
+    color: $color--steel-blue;
   }
 
   &-content {
     max-height: rem(135px);
     margin-bottom: space(2);
     overflow: hidden;
+    color: $color--steel-blue;
   }
 
   &-date {
     margin-bottom: space(3);
     font-size: rem(16px);
     font-style: italic;
+    color: $color--steel-blue;
   }
 
   &-cta {
     font-size: rem(16px);
     font-weight: bold;
+    color: $color--steel-blue;
   }
 
   @media screen and (min-width: 672px) {
