@@ -78,8 +78,7 @@ p {
 }
 
 .App {
-  // height: 100vh;
-  background: darkgray url("../../images/hero-img.jpg") top/cover no-repeat;
-  background-size: 100vw;
-  background-color: lighten($color--steel-blue, 75%);
+  background: lighten($color--steel-blue, 65%) url("../../images/hero-img.jpg")
+    top/cover no-repeat;
+  background-size: 100vw 100vh;
 }
