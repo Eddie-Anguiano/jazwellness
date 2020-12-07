@@ -16,7 +16,7 @@ const liVariant = {
   animate: {
     scale: [1, 1.5, 1],
     transition: {
-      repeat: Infinity,
+      yoyo: Infinity,
       duration: 0.8,
     },
   },

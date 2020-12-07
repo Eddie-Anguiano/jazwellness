@@ -1,0 +1,27 @@
+.HomeLoad {
+  position: fixed;
+  &-container {
+    position: relative;
+    @extend %center;
+    background-color: $color--steel-blue;
+    height: 100vh;
+    width: 100vw;
+    color: $color--beige;
+
+    &::before {
+      content: "";
+      position: absolute;
+      top: 50;
+      left: 50;
+      transform: translateY(120px);
+      height: 200px;
+      width: 500px;
+      background-color: $color--steel-blue;
+      z-index: 1000;
+    }
+  }
+
+  &-letter {
+    font-size: rem(45px);
+  }
+}

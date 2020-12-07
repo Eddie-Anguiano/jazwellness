@@ -2,13 +2,17 @@ import React, { Component } from "react";
 import BlogCardContainer from "../BlogCardContainer/BlogCardContainer";
 import Header from "../Header/Header";
 import Hero from "../Hero/Hero";
+import HomeLoad from "../HomeLoad/HomeLoad";
 import Contact from "../Contact/Contact";
 import Client from "../../contentful";
 
 export default class Home extends Component {
   constructor(props) {
     super(props);
-    this.state = { blogs: [] };
+    this.state = {
+      blogs: [],
+      load: true,
+    };
   }
 
   formatData = (data) => {
@@ -49,7 +53,7 @@ export default class Home extends Component {
       });
       const blogs = this.formatData(response);
 
-      this.setState({ blogs: blogs });
+      this.setState({ blogs: blogs, load: false });
     } catch (error) {
       console.log(error);
     }
@@ -62,6 +66,7 @@ export default class Home extends Component {
   render() {
     return (
       <div className="Home">
+        {this.state.load && <HomeLoad />}
         <Header />
         <Hero />
         <BlogCardContainer blogs={this.state.blogs} />
