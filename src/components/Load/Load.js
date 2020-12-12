@@ -24,7 +24,11 @@ const liVariant = {
 
 export default function Load() {
   return (
-    <div className="Load">
+    <motion.div
+      className="Load"
+      initial={{ x: "100vw" }}
+      animate={{ x: 0 }}
+      transition={{ duration: 0.4 }}>
       <motion.div
         initial="initial"
         animate="animate"
@@ -35,6 +39,6 @@ export default function Load() {
         <motion.div variants={liVariant} className="Load-circle"></motion.div>
         <motion.div variants={liVariant} className="Load-circle"></motion.div>
       </motion.div>
-    </div>
+    </motion.div>
   );
 }

@@ -14,7 +14,9 @@ export default function Blog(props) {
         const response = await Client.getEntry(props.match.params.id);
         const formatedBlog = formatData(response);
         setBlogs(formatedBlog);
-        setIsLoading(false);
+        setTimeout(() => {
+          setIsLoading(false);
+        }, 1000);
       } catch (error) {
         console.log(error);
       }

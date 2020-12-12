@@ -52,8 +52,14 @@ export default class Home extends Component {
         content_type: "blog",
       });
       const blogs = this.formatData(response);
-
-      this.setState({ blogs: blogs, load: false });
+      this.setState(() => {
+        return { blogs: blogs };
+      });
+      setTimeout(() => {
+        this.setState(() => {
+          return { load: false };
+        });
+      }, 2000);
     } catch (error) {
       console.log(error);
     }
