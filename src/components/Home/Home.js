@@ -5,6 +5,7 @@ import Hero from "../Hero/Hero";
 import HomeLoad from "../HomeLoad/HomeLoad";
 import Contact from "../Contact/Contact";
 import Client from "../../contentful";
+import { AnimatePresence } from "framer-motion";
 
 export default class Home extends Component {
   constructor(props) {
@@ -72,7 +73,8 @@ export default class Home extends Component {
   render() {
     return (
       <div className="Home">
-        {this.state.load && <HomeLoad />}
+        <AnimatePresence>{this.state.load && <HomeLoad />}</AnimatePresence>
+
         <Header />
         <Hero />
         <BlogCardContainer blogs={this.state.blogs} />

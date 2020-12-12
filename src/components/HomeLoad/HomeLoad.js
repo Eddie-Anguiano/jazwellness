@@ -25,7 +25,9 @@ const childVariant = {
 
 export default function HomeLoad() {
   return (
-    <div className="HomeLoad">
+    <motion.div
+      className="HomeLoad"
+      exit={{ y: "-100vh", transition: { duration: 0.3 } }}>
       <motion.div
         initial="initial"
         animate="animate"
@@ -77,6 +79,6 @@ export default function HomeLoad() {
           m
         </motion.span>
       </motion.div>
-    </div>
+    </motion.div>
   );
 }

@@ -3,6 +3,7 @@ import Header from "../Header/Header";
 import Load from "../Load/Load";
 import Client from "../../contentful";
 import { documentToReactComponents } from "@contentful/rich-text-react-renderer";
+import { AnimatePresence } from "framer-motion";
 
 export default function Blog(props) {
   const [isLoading, setIsLoading] = useState(true);
@@ -40,7 +41,8 @@ export default function Blog(props) {
 
   return (
     <>
-      {isLoading && <Load />}
+      <AnimatePresence>{isLoading && <Load />}</AnimatePresence>
+
       <Header />
       <div className="Blog wrapper">
         <section className="Blog-post">
