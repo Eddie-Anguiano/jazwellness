@@ -5,7 +5,7 @@ import Hero from "../Hero/Hero";
 import HomeLoad from "../HomeLoad/HomeLoad";
 import Contact from "../Contact/Contact";
 import Client from "../../contentful";
-import { AnimatePresence } from "framer-motion";
+import { AnimatePresence, motion } from "framer-motion";
 
 export default class Home extends Component {
   constructor(props) {
@@ -60,7 +60,7 @@ export default class Home extends Component {
         this.setState(() => {
           return { load: false };
         });
-      }, 2000);
+      }, 2500);
     } catch (error) {
       console.log(error);
     }
@@ -72,14 +72,18 @@ export default class Home extends Component {
 
   render() {
     return (
-      <div className="Home">
+      <motion.div
+        className="Home"
+        initial={{ opacity: 0 }}
+        animate={{ opacity: 1 }}
+        exit={{ x: "-30vw", opacity: 0, transition: { duration: 0.4 } }}>
         <AnimatePresence>{this.state.load && <HomeLoad />}</AnimatePresence>
 
         <Header />
         <Hero />
         <BlogCardContainer blogs={this.state.blogs} />
         <Contact />
-      </div>
+      </motion.div>
     );
   }
 }

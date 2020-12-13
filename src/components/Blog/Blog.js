@@ -3,7 +3,7 @@ import Header from "../Header/Header";
 import Load from "../Load/Load";
 import Client from "../../contentful";
 import { documentToReactComponents } from "@contentful/rich-text-react-renderer";
-import { AnimatePresence } from "framer-motion";
+import { AnimatePresence, motion } from "framer-motion";
 
 export default function Blog(props) {
   const [isLoading, setIsLoading] = useState(true);
@@ -40,7 +40,11 @@ export default function Blog(props) {
   };
 
   return (
-    <>
+    <motion.div
+      initial={{ opacity: 0 }}
+      animate={{ opacity: 1 }}
+      transition={{ duration: 0.9 }}
+      exit={{ x: "30vw", opacity: 0, transition: { duration: 0.4 } }}>
       <AnimatePresence>{isLoading && <Load />}</AnimatePresence>
 
       <Header />
@@ -55,6 +59,6 @@ export default function Blog(props) {
         </section>
       </div>
       <footer className="Blog-footer">jazwellness.com&#174;</footer>
-    </>
+    </motion.div>
   );
 }

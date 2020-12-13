@@ -27,7 +27,7 @@ export default function HomeLoad() {
   return (
     <motion.div
       className="HomeLoad"
-      exit={{ y: "-100vh", transition: { duration: 0.3 } }}>
+      exit={{ opacity: 0, y: -40, transition: { duration: 0.3 } }}>
       <motion.div
         initial="initial"
         animate="animate"

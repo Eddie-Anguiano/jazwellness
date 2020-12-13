@@ -26,10 +26,10 @@ export default function Load() {
   return (
     <motion.div
       className="Load"
-      initial={{ x: "100vw" }}
-      animate={{ x: 0 }}
-      transition={{ duration: 0.4 }}
-      exit={{ y: "-100vh" }}>
+      initial={{ x: "20vw", opacity: 0 }}
+      animate={{ x: 0, opacity: 1 }}
+      transition={{ duration: 0.3 }}
+      exit={{ opacity: 0 }}>
       <motion.div
         initial="initial"
         animate="animate"
