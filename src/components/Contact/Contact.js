@@ -11,7 +11,7 @@ export default function Contact() {
         <div className="contact-info">
           <div className="contact-social-container">
             <p className="contact-header">Contact Me!</p>
-            <div className="contact-email">jasminchavez@gmail.com</div>
+            <div className="contact-email">Chavezjasmin2014@yahoo.com</div>
             <IconContext.Provider value={{ className: "contact-icons" }}>
               <div className="contact-icon-container">
                 <GrInstagram />
